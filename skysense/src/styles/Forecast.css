@@ -1,0 +1,90 @@
+/* src/styles/Forecast.css */
+
+.forecast {
+  background: rgba(30, 41, 59, 0.85); /* slight transparency for modern look */
+  backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 1.5rem 1.2rem 1.2rem;
+  color: #f8fafc;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  margin-top: 0; /* remove extra gap under Highlights */
+}
+
+.title {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: left;
+  color: #38bdf8;
+}
+
+/* Horizontal list layout */
+.forecast-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1rem;
+  flex-wrap: nowrap; /* keeps 5 in a line */
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #334155 transparent;
+}
+
+/* Hide scrollbar in WebKit but keep scrollable */
+.forecast-list::-webkit-scrollbar {
+  height: 6px;
+}
+.forecast-list::-webkit-scrollbar-thumb {
+  background-color: #334155;
+  border-radius: 3px;
+}
+
+/* Forecast Card */
+.forecast-card {
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  min-width: 120px; /* good balance for 5 items in a row */
+  flex: 1;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.forecast-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.4);
+}
+
+.day {
+  font-size: 0.9rem;
+  color: #94a3b8;
+  margin-bottom: 0.4rem;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  margin: 0.5rem auto;
+  display: block;
+}
+
+.temp {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+.desc {
+  font-size: 0.85rem;
+  color: #cbd5e1;
+}
+
+/* Placeholder */
+.placeholder {
+  text-align: center;
+  opacity: 0.7;
+  padding: 2rem;
+  font-size: 1rem;
+}
